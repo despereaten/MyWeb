@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #fff5f5, #fff0f5);
+    color: #5a4a6a;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    border: 1px solid #f8e1f0;
+}
+
+/* 顶部装饰 */
+.header-decoration {
+    height: 10px;
+    background: linear-gradient(90deg, #ffd6e7, #ffb6c1, #ffd6e7);
+    position: relative;
+}
+
+.header-decoration::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.3) 10px,
+        rgba(255, 255, 255, 0.3) 20px
+    );
+}
+
+/* 主要内容区域 */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+/* 左侧照片区域 */
+.image-section {
+    flex: 0 0 35%;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 5px solid white;
+    margin-bottom: 20px;
+}
+
+.photo-frame {
+    position: relative;
+    padding: 10px;
+    background: #fff5f8;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.photo-frame::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px dashed #ffc2d6;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+/* 右侧基本信息 */
+.info-section {
+    flex: 0 0 65%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #8a4f7d;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px dotted #f0d9e7;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #a67f8e;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.basic-info {
+    background: #fff9fb;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #f8e1f0;
+}
+
+.info-item {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.info-item i {
+    width: 25px;
+    color: #d8a7ca;
+    margin-right: 10px;
+}
+
+/* 详细信息区域 */
+.details-section {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px dashed #f0d9e7;
+}
+
+h2 {
+    color: #8a4f7d;
+    margin: 25px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0d9e7;
+    position: relative;
+}
+
+h2::after {
+    content: "❀";
+    position: absolute;
+    right: 0;
+    color: #d8a7ca;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* 技能列表 */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.skill {
+    background: #fff5f8;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid #f0d9e7;
+    transition: all 0.3s ease;
+}
+
+.skill:hover {
+    background: #ffecf1;
+    transform: translateY(-2px);
+}
+
+/* 爱好区域 */
+.hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.hobby {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+    padding: 15px;
+    background: #fff9fb;
+    border-radius: 15px;
+    border: 1px solid #f0d9e7;
+    transition: transform 0.3s ease;
+}
+
+.hobby:hover {
+    transform: translateY(-5px);
+    background: #fff5f8;
+}
+
+.hobby-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #d8a7ca;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 25px 0;
+    background: #fff9fb;
+    border-top: 1px solid #f8e1f0;
+    color: #a67f8e;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #d8a7ca;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #8a4f7d;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .image-section {
+        flex: 1;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .info-section {
+        flex: 1;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
